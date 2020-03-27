@@ -594,7 +594,8 @@ namespace Ionic.Zip
                 }
                 catch (System.IO.IOException ioexc1)
                 {
-                    // Check if we can call GetHRForException,
+                    // TODO: Cannot find library `System.Security.Permissions`, maybe because of .NET Core?
+                    /*// Check if we can call GetHRForException,
                     // which makes unmanaged code calls.
                     var p = new System.Security.Permissions.SecurityPermission(
                         System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode);
@@ -611,7 +612,7 @@ namespace Ionic.Zip
                         // aggregate time waited after 10 retries: 250 + 55*550 = 30.5s
                         System.Threading.Thread.Sleep(250 + retries * 550);
                     }
-                    else
+                    else*/
                     {
                         // The permission.Demand() failed. Therefore, we cannot call
                         // GetHRForException, and cannot do the subtle handling of
