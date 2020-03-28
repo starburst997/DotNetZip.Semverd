@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net46;netstandard2.0;netcoreapp3.0</TargetFrameworks>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <Import Project="..\Zip.Shared\Zip.Shared.projitems" Label="Shared" />
+
+    <Import Project="..\Zlib.Shared\Zlib.Shared.projitems" Label="Shared" />
+
+</Project>

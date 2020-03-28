@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\JD\.Rider2019.3\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\JD\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\JD\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_DotNetCoreZip.482256958.00" t="ExcludeRecursive" />
+    <e p="H:\projects\unity-modtracker\dependencies\DotNetZip.Semverd\src\DotNetCoreZip" t="IncludeRecursive">
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="DotNetCoreZip.csproj" t="IncludeRecursive" />
+      <e p="DotNetCoreZip.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netstandard2.0" t="Include">
+            <e p="DotNetCoreZip.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="H:\projects\unity-modtracker\dependencies\DotNetZip.Semverd\src\Zip.Shared" t="IncludeRecursive">
+      <e p="ComHelper.cs" t="Include" />
+      <e p="EncryptionAlgorithm.cs" t="Include" />
+      <e p="Events.cs" t="Include" />
+      <e p="Exceptions.cs" t="Include" />
+      <e p="ExtractExistingFileAction.cs" t="Include" />
+      <e p="FileSelector.cs" t="Include" />
+      <e p="OffsetStream.cs" t="Include" />
+      <e p="Shared.cs" t="Include" />
+      <e p="WinZipAes.cs" t="Include" />
+      <e p="Zip.Shared.projitems" t="Include" />
+      <e p="Zip.Shared.shproj" t="IncludeRecursive" />
+      <e p="ZipConstants.cs" t="Include" />
+      <e p="ZipCrypto.cs" t="Include" />
+      <e p="ZipDirEntry.cs" t="Include" />
+      <e p="ZipEntry.cs" t="Include" />
+      <e p="ZipEntry.Extract.cs" t="Include" />
+      <e p="ZipEntry.Read.cs" t="Include" />
+      <e p="ZipEntry.Write.cs" t="Include" />
+      <e p="ZipEntrySource.cs" t="Include" />
+      <e p="ZipErrorAction.cs" t="Include" />
+      <e p="ZipFile.AddUpdate.cs" t="Include" />
+      <e p="ZipFile.Check.cs" t="Include" />
+      <e p="ZipFile.cs" t="Include" />
+      <e p="ZipFile.Events.cs" t="Include" />
+      <e p="ZipFile.Extract.cs" t="Include" />
+      <e p="ZipFile.Read.cs" t="Include" />
+      <e p="ZipFile.Save.cs" t="Include" />
+      <e p="ZipFile.Selector.cs" t="Include" />
+      <e p="ZipFile.Static.cs" t="Include" />
+      <e p="ZipFile.x-IEnumerable.cs" t="Include" />
+      <e p="ZipInputStream.cs" t="Include" />
+      <e p="ZipOutputStream.cs" t="Include" />
+      <e p="ZipSegmentedStream.cs" t="Include" />
+    </e>
+    <e p="H:\projects\unity-modtracker\dependencies\DotNetZip.Semverd\src\Zlib.Shared" t="IncludeRecursive">
+      <e p="CRC32.cs" t="Include" />
+      <e p="Deflate.cs" t="Include" />
+      <e p="DeflateStream.cs" t="Include" />
+      <e p="GZipStream.cs" t="Include" />
+      <e p="Inflate.cs" t="Include" />
+      <e p="InfTree.cs" t="Include" />
+      <e p="ParallelDeflateOutputStream.cs" t="Include" />
+      <e p="Tree.cs" t="Include" />
+      <e p="Zlib.cs" t="Include" />
+      <e p="Zlib.Shared.projitems" t="Include" />
+      <e p="Zlib.Shared.shproj" t="IncludeRecursive" />
+      <e p="ZlibBaseStream.cs" t="Include" />
+      <e p="ZlibCodec.cs" t="Include" />
+      <e p="ZlibConstants.cs" t="Include" />
+      <e p="ZlibStream.cs" t="Include" />
+    </e>
+  </component>
+</project>
