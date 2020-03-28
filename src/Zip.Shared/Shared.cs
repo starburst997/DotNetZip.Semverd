@@ -25,6 +25,7 @@
 
 using System;
 using System.IO;
+using System.Text;
 
 namespace Ionic.Zip
 {
@@ -203,7 +204,9 @@ namespace Ionic.Zip
             {
 
             }
-#if NETCOREAPP2_0// || NETSTANDARD2_0
+#if NETSTANDARD2_0
+            if (ibm437 == null) ibm437 = Encoding.ASCII;
+#elif NETCOREAPP2_0
             if (ibm437 == null)
             {
                 try

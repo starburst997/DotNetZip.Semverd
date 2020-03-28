@@ -22,6 +22,8 @@ namespace Ionic.Zip
         static ZipFile()
         {
             System.Text.Encoding ibm437 = null;
+
+#if !NETSTANDARD2_0
             try
             {
                 ibm437 = System.Text.Encoding.GetEncoding("IBM437");
@@ -30,7 +32,11 @@ namespace Ionic.Zip
             {
 
             }
-#if NETCOREAPP2_0// || NETSTANDARD2_0
+#endif
+            
+#if NETSTANDARD2_0
+            if (ibm437 == null) ibm437 = Encoding.ASCII;
+#elif NETCOREAPP2_0
             if (ibm437 == null)
             {
                 try
@@ -55,7 +61,7 @@ namespace Ionic.Zip
                 }
             }
 #endif
-            _defaultEncoding = ibm437;
+            _defaultEncoding = ibm437 ?? System.Text.Encoding.ASCII;
         }
 
         /// <summary>

@@ -46,6 +46,7 @@ using System;
 using System.Threading;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using Ionic.Zip;
 
 namespace Ionic.Zip
@@ -1019,7 +1020,9 @@ namespace Ionic.Zip
         {
             get
             {
-#if NETCOREAPP2_0// || NETSTANDARD2_0
+#if NETSTANDARD2_0
+                return Encoding.ASCII;
+#elif NETCOREAPP2_0
                 return System.Text.CodePagesEncodingProvider.Instance.GetEncoding(1252);
 #else
                 return System.Text.Encoding.GetEncoding("IBM437");
