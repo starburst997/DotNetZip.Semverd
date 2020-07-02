@@ -344,7 +344,45 @@ namespace  Ionic.Zip
             if (!_inputStream.CanRead)
                 throw new ZipException("The stream must be readable.");
             _container= new ZipContainer(this);
-            _provisionalAlternateEncoding = System.Text.Encoding.GetEncoding("IBM437");
+            
+            
+            try
+            {
+                _provisionalAlternateEncoding = System.Text.Encoding.GetEncoding("IBM437");
+            }
+            catch (Exception /*e*/)
+            {
+
+            }
+            
+#if NETSTANDARD2_0
+            if (_provisionalAlternateEncoding == null) _provisionalAlternateEncoding = System.Text.Encoding.ASCII;
+#elif NETCOREAPP2_0 || NETCOREAPP3_0
+            if (_provisionalAlternateEncoding == null)
+            {
+                try
+                {
+                    _provisionalAlternateEncoding = System.Text.CodePagesEncodingProvider.Instance.GetEncoding(1252);
+                }
+                catch (Exception /*e*/)
+                {
+
+                }
+            }
+#else
+            if (_provisionalAlternateEncoding == null)
+            {
+                try
+                {
+                    _provisionalAlternateEncoding = System.Text.Encoding.GetEncoding(1252);
+                }
+                catch (Exception /*e*/)
+                {
+
+                }
+            }
+#endif
+            
             _leaveUnderlyingStreamOpen = leaveOpen;
             _findRequired= true;
             _name = name ?? "(stream)";

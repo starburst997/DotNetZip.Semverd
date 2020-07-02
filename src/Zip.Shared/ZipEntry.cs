@@ -58,7 +58,7 @@ namespace Ionic.Zip
             _Source = ZipEntrySource.None;
 #if NETSTANDARD2_0
             AlternateEncoding = Encoding.ASCII;
-#elif NETCOREAPP2_0
+#elif NETCOREAPP2_0 || NETCOREAPP3_0
             AlternateEncoding = System.Text.CodePagesEncodingProvider.Instance.GetEncoding(1252);
 #else
             AlternateEncoding = System.Text.Encoding.GetEncoding("IBM437");
@@ -2703,7 +2703,7 @@ namespace Ionic.Zip
 
 #if NETSTANDARD2_0
         private static System.Text.Encoding ibm437 = Encoding.ASCII;
-#elif NETCOREAPP2_0
+#elif NETCOREAPP2_0 || NETCOREAPP3_0
         private static System.Text.Encoding ibm437 = System.Text.CodePagesEncodingProvider.Instance.GetEncoding(1252);
 #else
         private static System.Text.Encoding ibm437 = System.Text.Encoding.GetEncoding("IBM437");
