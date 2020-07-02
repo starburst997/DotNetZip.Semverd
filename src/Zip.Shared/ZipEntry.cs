@@ -2539,7 +2539,7 @@ namespace Ionic.Zip
         }
 
 
-        internal Stream ArchiveStream
+        public Stream ArchiveStream
         {
             get
             {

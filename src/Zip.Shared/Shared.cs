@@ -196,14 +196,14 @@ namespace Ionic.Zip
         internal static byte[] StringToByteArray(string value)
         {
             System.Text.Encoding ibm437 = null;
-            try
+            /*try
             {
                 ibm437 = System.Text.Encoding.GetEncoding("IBM437");
             }
-            catch (Exception /*e*/)
+            catch (Exception)
             {
 
-            }
+            }*/
 #if NETSTANDARD2_0
             if (ibm437 == null) ibm437 = Encoding.ASCII;
 #elif NETCOREAPP2_0 || NETCOREAPP3_0

@@ -346,14 +346,14 @@ namespace  Ionic.Zip
             _container= new ZipContainer(this);
             
             
-            try
+            /*try
             {
                 _provisionalAlternateEncoding = System.Text.Encoding.GetEncoding("IBM437");
             }
-            catch (Exception /*e*/)
+            catch (Exception)
             {
 
-            }
+            }*/
             
 #if NETSTANDARD2_0
             if (_provisionalAlternateEncoding == null) _provisionalAlternateEncoding = System.Text.Encoding.ASCII;

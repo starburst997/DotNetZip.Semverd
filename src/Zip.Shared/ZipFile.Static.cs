@@ -24,14 +24,14 @@ namespace Ionic.Zip
             System.Text.Encoding ibm437 = null;
 
 #if !NETSTANDARD2_0
-            try
+            /*try
             {
                 ibm437 = System.Text.Encoding.GetEncoding("IBM437");
             }
-            catch (Exception /*e*/)
+            catch (Exception)
             {
 
-            }
+            }*/
 #endif
             
 #if NETSTANDARD2_0
