@@ -184,8 +184,6 @@ namespace Ionic.Zip
             return path;
         }
 
-
-        //static System.Text.Encoding ibm437 = System.Text.Encoding.GetEncoding("IBM437");
         static System.Text.Encoding utf8 = System.Text.Encoding.GetEncoding("UTF-8");
 
         internal static byte[] StringToByteArray(string value, System.Text.Encoding encoding)
@@ -196,17 +194,10 @@ namespace Ionic.Zip
         internal static byte[] StringToByteArray(string value)
         {
             System.Text.Encoding ibm437 = null;
-            /*try
-            {
-                ibm437 = System.Text.Encoding.GetEncoding("IBM437");
-            }
-            catch (Exception)
-            {
-
-            }*/
-#if NETSTANDARD2_0
-            if (ibm437 == null) ibm437 = Encoding.ASCII;
-#elif NETCOREAPP2_0 || NETCOREAPP3_0
+            
+#if NETSTANDARD2_0 || NETSTANDARD2_1
+            ibm437 = Encoding.ASCII;
+#elif NETCOREAPP2_0 || NETCOREAPP3_0 || NETCOREAPP3_1
             if (ibm437 == null)
             {
                 try
