@@ -347,7 +347,7 @@ namespace  Ionic.Zip
             
 #if NETSTANDARD2_0 || NETSTANDARD2_1
             if (_provisionalAlternateEncoding == null) _provisionalAlternateEncoding = System.Text.Encoding.ASCII;
-#elif NETCOREAPP2_0 || NETCOREAPP3_0 || NETCOREAPP3_1
+#elif NETCOREAPP2_0 || NET5_0 || NETCOREAPP3_0 || NETCOREAPP3_1
             if (_provisionalAlternateEncoding == null)
             {
                 try

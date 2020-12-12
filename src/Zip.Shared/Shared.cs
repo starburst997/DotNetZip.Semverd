@@ -197,7 +197,7 @@ namespace Ionic.Zip
             
 #if NETSTANDARD2_0 || NETSTANDARD2_1
             ibm437 = Encoding.ASCII;
-#elif NETCOREAPP2_0 || NETCOREAPP3_0 || NETCOREAPP3_1
+#elif NETCOREAPP2_0 || NET5_0 || NETCOREAPP3_0 || NETCOREAPP3_1
             if (ibm437 == null)
             {
                 try
